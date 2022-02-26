@@ -1,0 +1,287 @@
+.header {
+  display: grid;
+  grid-template-columns: minmax(15rem, 1fr) repeat(5, 1fr);
+  grid-template-rows: minmax(min-content, 8rem) minmax(min-content, 8rem) repeat(
+      3,
+      1fr
+    );
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: $grey-dark-1;
+
+  @media only screen and (max-width: $bp-small) {
+    // grid-template-columns:
+  }
+
+  &__logo {
+    grid-row: 1 / span 2;
+    padding-left: 2rem;
+    height: 10vw;
+    justify-self: center;
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+
+    &--sticky {
+      position: fixed;
+      top: -1.2rem;
+      left: 18%;
+      height: 9rem;
+      z-index: 991;
+      @media only screen and (max-width: $bp-largest) {
+        left: 2%;
+      }
+    }
+  }
+
+  &__btn-login {
+    display: block;
+    text-decoration: none;
+    border: 0.2rem solid $primary;
+    background-image: $gradient;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    justify-self: end;
+    cursor: pointer;
+    border-radius: 10rem;
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 6/-1;
+    }
+
+    &:hover,
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+  &__content {
+    min-height: 60rem;
+    grid-column: 1 / -1;
+    grid-row: 3/ -1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: $border-top;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-wrap: wrap;
+    }
+
+    &-svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+  &__slogan {
+    width: 50%;
+    border: 2px solid $primary;
+    padding: 3rem;
+    position: relative;
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+    }
+
+    &-btn {
+      position: absolute;
+      top: -1rem;
+      left: 1.8rem;
+
+      transform: translateX(-48%) translateY(-1rem) rotate(-35deg);
+
+      font-size: 1.6rem;
+      color: #fff;
+      letter-spacing: 0.2rem;
+      background-color: $primary-light;
+      border: 2px solid $primary-light;
+      padding: 1rem 3rem;
+      border-radius: 4rem;
+      animation: move 1s linear infinite;
+    }
+    &-svg {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translateY(-50%);
+      fill: $primary-dark;
+      @media only screen and (max-width: $bp-large) {
+        width: 12rem;
+        height: 12rem;
+        left: 70%;
+      }
+      @media only screen and (max-width: 500px) {
+        width: 10rem;
+        height: 10rem;
+        left: 75%;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        width: 8rem;
+        height: 8rem;
+        left: 80%;
+      }
+    }
+  }
+}
+
+.nav {
+  grid-column: 2 / -1;
+  grid-row: 1/2;
+  align-self: center;
+  padding: 1rem 0;
+  border-bottom: 0.2rem solid $secondary;
+  color: $grey-dark-2;
+  font-weight: 300;
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1/-1;
+  }
+
+  &__links {
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.6rem;
+    list-style: none;
+    @media only screen and (max-width: $bp-small) {
+      justify-content: center;
+      font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__item:nth-last-child(1) {
+    margin-left: 5rem;
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 1rem 2rem;
+      transition: 0.3s all;
+    }
+    &:hover {
+      color: $primary;
+    }
+    &:active {
+      transform: scale(1.05);
+    }
+    &--btn {
+      &:link,
+      &:visited {
+        color: inherit;
+        border: 0.2rem solid $primary;
+        padding: 1rem 3rem;
+        // font-size: 1.9rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        background-image: none;
+        transition: all 0.2s;
+      }
+      &:hover {
+        // color: inherit;
+        color: #fff;
+        background-image: $gradient;
+      }
+    }
+  }
+  &__logo {
+    display: none;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.search {
+  grid-column: 2 / span 4;
+  grid-row: 2 / span 1;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-smaller) {
+    grid-column: 1 / span 5;
+  }
+
+  &__input {
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    border: 0.2rem solid $primary;
+    border-radius: 4rem;
+    background-color: $grey-light-1;
+    margin-right: -4rem;
+    width: 80%;
+    transition: 0.4s all;
+    &:focus {
+      outline: none;
+      width: 90%;
+      background-color: $grey-light-2;
+    }
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: $grey-dark-3;
+    }
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+  }
+  &__svg {
+    fill: $primary-dark;
+    transform: translateY(3px);
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-right: 15%;
+  z-index: 990;
+  background-color: $grey-light-3;
+  border-bottom: none;
+  @media only screen and (max-width: $bp-larger) {
+    padding-right: 5%;
+  }
+  @media only screen and (max-width: 500px) {
+    padding-right: 0;
+    padding: 1rem;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-45%) translateY(-1rem) rotate(-35deg) scale(1);
+  }
+
+  33.3% {
+    transform: translateX(-45%) translateY(-1rem) rotate(-35deg) scale(1.05);
+  }
+
+  66.6% {
+    transform: translateX(-45%) translateY(-1rem) rotate(-35deg);
+  }
+
+  100% {
+    transform: translateX(-45%) translateY(-1rem) rotate(-35deg);
+  }
+}

@@ -1,0 +1,344 @@
+.container {
+  position: relative;
+}
+.app {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20%;
+  // min-width: 80rem;
+  max-width: 120rem;
+  min-height: 60rem;
+  border-radius: 6px;
+  background-color: $grey-light-2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 10fr 1fr;
+  transition: 0.5s;
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 min-content);
+  }
+}
+
+.balance {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 1;
+
+  @media only screen and (max-width: $bp-smaller) {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 2rem;
+  margin: 0rem 2rem;
+  &__value {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: $primary;
+  }
+}
+
+.movements {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  @media only screen and (max-width: $bp-smaller) {
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+  }
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem;
+  //   padding: 1rem;
+  border: 1px solid $grey-dark-3;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 1.6rem;
+  height: 100%;
+  overflow: scroll;
+
+  &__row {
+    min-height: 15%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $grey-dark-3;
+    &-deposit {
+      background: linear-gradient(
+        120deg,
+        $color-deposit-dark 0%,
+        $color-deposit-light 15%,
+        $grey-light-2 90%
+      );
+    }
+    &-withdrawal {
+      background: linear-gradient(
+        120deg,
+        $color-withdraw-dark 0%,
+        $color-withdraw-light 15%,
+        $grey-light-2 90%
+      );
+    }
+    &-loan {
+      background: linear-gradient(
+        120deg,
+        $color-loan-dark 0%,
+        $color-loan-light 15%,
+        $grey-light-2 90%
+      );
+    }
+  }
+  &__data {
+    color: $grey-light-2;
+  }
+  &__value {
+    color: $grey-dark-2;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+}
+
+.summary {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  margin: 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  &__in {
+    color: $color-deposit-dark;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__out {
+    color: $color-withdraw-dark;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__btn {
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+.actions {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  @media only screen and (max-width: $bp-smaller) {
+    grid-column: 1 / -1;
+    grid-row: 4 / span 1;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+//Expander MENU
+
+.operation {
+  width: 85%;
+  //   text-align: center;
+  font-size: 1.6rem;
+  border-top: 1px solid $grey-dark-3;
+
+  padding: 2rem;
+
+  &__arrow {
+    display: inline-block;
+    font-size: 2rem;
+    color: $primary-dark;
+    margin-right: 2rem;
+  }
+  &__label {
+    z-index: 1;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    &:hover {
+      color: $primary-dark;
+    }
+
+    &:hover .operation__arrow {
+      transform: scale(1.1);
+      font-weight: 600;
+    }
+  }
+
+  &__expandable {
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    transform: translateY(0);
+    opacity: 0;
+    transition: 1s all;
+    text-align: center;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+
+      & label {
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  &__input {
+    width: 80%;
+    padding: 0.5rem 2rem;
+  }
+
+  &__btn {
+    display: block;
+    width: 80%;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+  }
+  &__description {
+    width: 80%;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+  }
+}
+
+.expand {
+  display: none;
+}
+
+.expand:checked ~ *.operation__expandable {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  height: min-content;
+}
+
+.card {
+  width: 70%;
+  height: 15vw;
+  @media only screen and (max-width: $bp-larger) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    width: 50%;
+    height: 20vw;
+    min-width: 180px;
+    min-height: 100px;
+    transform: translateX(-20%);
+  }
+  max-height: 22rem;
+  max-width: 40rem;
+  margin: 1rem auto;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      to right,
+      rgba($primary-light, 0.6),
+      rgba($primary, 0.8)
+    ),
+    url(../IMG/card-backgorund.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+
+  box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+  &__logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-img {
+      height: 5rem;
+      transform: translateY(2px);
+    }
+  }
+  &__chip {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 3rem;
+  }
+
+  &__signal {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    fill: #fff;
+    transform: rotate(90deg);
+    &-img {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  &__data {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    text-transform: uppercase;
+    text-align: start;
+    letter-spacing: 0.2rem;
+    & p {
+      text-align: start;
+      display: inline-block;
+      font-weight: 300;
+    }
+  }
+
+  &__number {
+    letter-spacing: 0.35rem;
+  }
+  &__footer {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-img {
+      width: 7rem;
+    }
+  }
+}

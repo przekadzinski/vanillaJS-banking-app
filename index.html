@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/logo-tr.png" type="image/png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Vanilla Bank</title>
+  </head>
+  <body class="container">
+    <header class="header" id="header">
+      <img src="img/logo_transparent.png" alt="Logo" class="header__logo" />
+      <nav class="nav">
+        <img src="img/logo_transparent.png" alt="Logo" class="nav__logo" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a href="#section-1" class="nav__link">Konta osobiste</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section-2" class="nav__link">Oferta</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section-3" class="nav__link">Aktualności</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section-4" class="nav__link">Kalkulator kredytowy</a>
+          </li>
+          <li class="nav__item">
+            <a href="account.html" class="nav__link nav__link--btn btn--show-signup"
+              >Załóż konto</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Wyszukaj" />
+        <button class="search__btn">
+          <svg class="search__svg">
+            <use xlink:href="symbol-defs.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+      <a href="account.html" class="header__btn-login">Zaloguj</a>
+
+      <div class="header__content mt-md padding-top-lg">
+        <h1 class="header__title heading-1">
+          Konto <span class="highlight">VanillaPRO</span></br>
+          <span class="highlight">zyskaj</span> więcej!
+      </h1>
+        <div class="header__slogan mt-lg mb-lg">
+          <h2 class="heading-4">Konto VanillaPRO</h2>
+          <p class="text">500 zł premii za otwarcie konta!</p>
+          <svg class="header__slogan-svg svg">
+            <use xlink:href="symbol-defs.svg#icon-gift"></use>
+          </svg>
+          <button class="btn mt-md mb-sm check-detail">Sprawdź  &rarr;</button>
+          <button class="header__slogan-btn">Promocja</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="slider-section mt-lg padding-top-lg mb-lg" id="section-1">
+      <h2 class="heading-2 heading-2--description mb-lg">Wszystko czego potrzebujesz w nowoczesnym banku!</h2>
+     <div class="slider">
+       <div class="slide slide--1">
+       
+          <h5 class="slide__header">Oszczędności</h5>
+          <h6 class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta tenetur rem! Laboriosam, pariatur perferendis. Omnis nisi dolores saepe maxime.</h6>
+      
+       </div>
+       <div class="slide slide--2">
+       
+        <h5 class="slide__header">Konto IKE</h5>
+        <h6 class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta tenetur rem! Laboriosam, pariatur perferendis. Omnis nisi dolores saepe maxime.</h6>
+    
+     </div>
+     <div class="slide slide--3">
+       
+      <h5 class="slide__header">Kantor Online</h5>
+      <h6 class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta tenetur rem! Laboriosam, pariatur perferendis. Omnis nisi dolores saepe maxime.</h6>
+  
+   </div>
+   <div class="slide slide--3">
+       
+    <h5 class="slide__header">Makler - dostęp do 7 rynków!</h5>
+    <h6 class="slide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta tenetur rem! Laboriosam, pariatur perferendis. Omnis nisi dolores saepe maxime.</h6>
+
+ </div>
+
+ <div class="slide__bar">
+ </div>
+
+     </div>
+    </section>
+
+    <section class="section-cards mt-lg padding-top-lg" id="section-2">
+      <h2 class="heading-2 heading-2--description mb-lg">Najpopularniejsze oferty</h2>
+      <div class="offers">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture">
+            <svg class="card__svg svg">
+              <use xlink:href="symbol-defs.svg#icon-gift"></use>
+            </svg>
+          </div>
+          <h4 class="card__heading">
+            <span class="highlight">Konto w promocji</span>
+          </h4>
+          <div class="card__details">
+            Otwórz konto VanillaPRO i zgarnij 500 zł!
+          </div>
+        </div>
+        <div class="card__side card__side--back">
+          <div class="card__cta">
+            <h2 class="heading-2--description heading-2 card__arrow">&darr;</h2>
+            <div class="card__account">
+              <a href="account.html" class="btn card__btn btn--show-signup">Otwórz konto!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture">
+            <svg class="card__svg svg">
+              <use xlink:href="symbol-defs.svg#icon-dollar"></use>
+            </svg>
+          </div>
+          <h4 class="card__heading">
+            <span class="highlight">Kredyt gotówkowy</span>
+          </h4>
+          <div class="card__details">
+            Weź kredyt na prostych warunkach! RRSO: 9,99%
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <h2 class="heading-2--description heading-2 card__arrow">&darr;</h2>
+            <div class="card__account">
+              <a href="#section-4" class="btn card__btn">Kalkulator kredytowy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture">
+            <svg class="card__svg svg">
+              <use xlink:href="symbol-defs.svg#icon-deck"></use>
+            </svg>
+          </div>
+          <h4 class="card__heading">
+            <span class="highlight">Ubezpieczenie</span>
+          </h4>
+          <div class="card__details">
+            Możliwość zakupu ubezpieczenia kiedy tylko chcesz!
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <h2 class="heading-2--description heading-2 card__arrow">&darr;</h2>
+            <div class="card__account">
+              <a href="#accountForm" class="btn card__btn check-detail">Zobacz więcej...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture">
+            <svg class="card__svg svg">
+              <use xlink:href="symbol-defs.svg#icon-museum"></use>
+            </svg>
+          </div>
+          <h4 class="card__heading">
+            <span class="highlight">Kredyt mieszkaniowy</span>
+          </h4>
+          <div class="card__details">
+            Zapytaj doradcę o ofertę na własne cztery kąty!
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <h2 class="heading-2--description heading-2 card__arrow">&darr;</h2>
+            <div class="card__account">
+              <a href="#section-4" class="btn card__btn">Kalkulator kredytowy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    </section>
+
+    <section class="news mt-lg padding-top-lg" id="section-3">
+      <div class="news-app">
+        <h2 class="heading-2 heading-2--description-white mb-lg">Nowości w aplikacji</h2>
+        <div class="news-app__article">
+          <img src="IMG/img-info-sm.jpg" alt="Giełda" class="news-app__img">
+          <p class="news-app__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia sed exercitationem ipsum accusamus. Quae, magnam voluptatem repudiandae ullam at ut. Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt illum architecto quis fugit nulla deleniti ipsum, incidunt adipisci minima.
+          </p>
+        </div>
+        <div class="news-app__article">
+          <img src="IMG/img-info2-sm.jpg" alt="Giełda" class="news-app__img">
+          <p class="news-app__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia sed exercitationem ipsum accusamus. Quae, magnam voluptatem repudiandae ullam at ut. Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt illum architecto quis fugit nulla deleniti ipsum, incidunt adipisci minima.
+          </p>
+        </div>
+      </div>
+
+      <div class="news-browser">
+        <h2 class="heading-2 heading-2--description-white mb-lg">Aktualności</h2>
+        <div class="news-browser__article">
+          <span class="news-browser__day">2</span>
+          <span class="news-browser__month">LUT</span>
+          <button class="btn news-browser__btn check-detail">Wniosek 500+ na nowy okres w Vanilla Bank</button>
+        </div>
+        <div class="news-browser__article">
+          <span class="news-browser__day">28</span>
+          <span class="news-browser__month">STY</span>
+          <button class="btn news-browser__btn check-detail">Oszuści wysyłają SMS-y podszywające się pod bank</button>
+        </div>
+        <div class="news-browser__article">
+          <span class="news-browser__day">21</span>
+          <span class="news-browser__month">GRU</span>
+          <button class="btn news-browser__btn check-detail">Lorem ipsum dolor sit amet consectetur</button>
+        </div>
+
+        <a href="#" class="btn news-browser__btn-2 mt-lg check-detail">Zobacz więcej aktualności...</a>
+      </div>
+    </section>
+
+    <section class="calculators" id="section-4">
+      <h2 class="heading-2 heading-2--description mb-lg mt-lg">Kalkulator kredytowy</h2>
+    <div class="calculator">
+      <div class="calculator__calculations">
+        <div class="calculator__amount">
+          <span class="calculator__amount--title">Kwota pożyczki</span>
+          <div class="calculator__amount-controls">
+            <form action="#" class="calculator__amount-form">
+              <input type="range" min = '500' max="100000" name="credit_amount-range" value="10000"
+              class="amount-input calculator__amount-range" id="credit_amount-range" >
+              
+              <input type="number" min="500" value="10000" max="100000" class="amount-input calculator__amount-input" id="credit_amount-input">
+            </form>
+          </div>
+          <div class="calculator__amount-details">
+            <span class="calculator__amount-min">min. 500 zł</span>
+            <span class="calculator__amount-max">max. 100 000 zł</span>
+          </div>
+          
+        </div>
+        <div class="calculator__installments mt-md">
+          <span class="calculator__amount--title">Ilość rat:</span>
+          <div class="calculator__amount-controls">
+            <form action="#" class="calculator__amount-form">
+              
+              <input type="range" min = '5' max="120" name="credit_amount-range" value="12"
+              class="installment-input calculator__amount-range" id="credit_installment-range">
+
+              <input type="number" min="5" value="12" max="120" class="installment-input calculator__amount-input" id="credit_instllment-input">
+            </form>
+          </div>
+          <div class="calculator__amount-details">
+            <span class="calculator__amount-min">min. 5 rat</span>
+            <span class="calculator__amount-max">max. 120 rat</span>
+          </div>
+        </div>
+      </div>
+   
+ 
+    <div class="calculator__summary">
+      <div class="calculator__summary-header">
+        <svg class="calculator__summary-svg">
+          <use xlink:href="symbol-defs.svg#icon-info-with-circle"></use>
+        </svg>
+        <span class="calculator__summary-description">Poniżej prezentowane są szacunkowe obliczenia.</span>
+      </div>
+      <div class="calculator__summary-installment">Rata miesięczna: <span class="calculator__summary-txt">633,50</span> zł</div>
+      <div class="calculator__summary-rrso">RRSO: <span class="calculator__summary-txt-sm">14,29</span></div>
+      <button class="btn calculator__summary-btn check-detail">Sprawdz szczegóły</button>
+    </div>
+
+    </div>
+    </section>
+
+    <footer class="footer mt-lg">
+    
+        <img src="/SVG/circle-up.svg" alt="SCROOL TO HEADER IMG" class="footer__btn" data-scroll="#header">
+      
+      <div class="footer-menu">
+        <img src="img/logo_transparent.png" alt="Logo" class="footer-menu__logo" />
+       
+        <div class="footer-menu__column">
+          <h7 class="footer-menu__title highlight">Przydatne informacje</h7>
+          <ul class="footer-menu__items">
+            <li class="footer-menu__item"><a href="#popup-waluty" class="footer-menu__link btn footer-menu__link--active footer__showExchange">Kursy walut</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link btn check-detail">Opłaty i prowizje</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link btn check-detail">Obsługa zdalna</a></li>
+          </ul>
+        </div>
+       
+        <div class="footer-menu__column">
+          <h7 class="footer-menu__title highlight">Vanilla o nas</h7>
+          <ul class="footer-menu__items">
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link btn check-detail">O nas</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link btn check-detail">Kariera</a></li>
+            <li class="footer-menu__item"><a href="#" class="footer-menu__link btn check-detail" >BFG</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+ 
+
+ 
+  <div class="popup__background"></div>
+
+
+  <div class="popup popup__checkDetails">
+    <div class="popup__message-3 mt-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellendus fugiat recusandae eveniet, vel nobis rerum illo ullam, perspiciatis, laudantium provident exercitationem excepturi dolorem? Saepe autem itaque numquam laudantium quo eos voluptate tempora similique quod a alias neque cum, sed explicabo aperiam magni distinctio enim nisi sit eligendi sapiente! Nesciunt ipsum labore rem est at a ullam facilis nostrum tempora enim perspiciatis suscipit, eveniet culpa quos magni animi eligendi voluptatem cupiditate sint numquam inventore? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, quod. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam molestiae sed non magni ipsa aperiam, labore cum ipsam voluptatum officiis?</div>
+    <span class="popup__message-4 highlight mt-md">Zapytaj na infolinii o szczegóły: 111 - 111 - 111</span>
+    <button class="popup__close-btn">
+      <svg class="popup__close">
+        <use xlink:href="symbol-defs.svg#icon-clear"></use>
+      </svg>
+  </div>
+
+  <div class="popup popup-exchange">
+    <h2 class="heading-4 highlight">Aktualne kursy walut NBP:</h2>
+    <table class="exchange"> 
+     
+      
+       <tr><th class="">CHF/PLN ➡</th><td>4.31</td></tr> 
+       <tr><th class="">EUR/PLN ➡</th><td>4.31</td></tr> 
+       <tr><th class="">USD/PLN ➡</th><td>4.31</td></tr> 
+       <tr><th class="">GBP/PLN ➡</th><td>4.31</td></tr> 
+       <tr><th class="">JPY/PLN ➡</th><td>4.31</td></tr> 
+
+    </table>
+    <button class="popup__close-btn">
+      <svg class="popup__close">
+        <use xlink:href="symbol-defs.svg#icon-clear"></use>
+      </svg>
+    </button>
+  </div>
+
+
+<script src="navActions.js"></script>
+<script src="smoothScroll.js"></script>
+  <script src="slider.js"></script>
+  <script src="calculator.js"></script>
+  <script src="popups.js"></script>
+  <script src="exchange.js"></script>
+  
+  </body>
+</html>

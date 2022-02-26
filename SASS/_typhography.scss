@@ -1,0 +1,142 @@
+.heading-1 {
+  color: $grey-dark-1;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.8;
+
+  @media only screen and (max-width: $bp-larger) {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-2 {
+  color: $grey-dark-1;
+  font-size: 4rem;
+  font-weight: 900;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 2.5rem;
+  }
+  &--description {
+    text-align: center;
+
+    color: $primary-dark;
+
+    @supports (-webkit-background-clip: url()) {
+      background-image: $gradient;
+      background-clip: text;
+      color: transparent;
+    }
+
+    &-white {
+      text-align: center;
+      color: $grey-light-2;
+      @supports (-webkit-background-clip: url()) {
+        background-image: linear-gradient(
+          to right,
+          rgba($grey-light-1, 0.8),
+          rgba($grey-light-2, 0.8)
+        );
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
+.heading-4 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+
+  @media only screen and (max-width: $bp-larger) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.6rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.4rem;
+  }
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+  color: $grey-light-2;
+  //   margin: 0 3rem;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: $gradient;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    transform: scale(1.07, 1.01) skewX(-25deg);
+  }
+}
+.mt-md {
+  margin-top: 3rem;
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 1.5rem;
+  }
+}
+.mt-lg {
+  margin-top: 6rem;
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 4rem;
+  }
+}
+.mb-lg {
+  margin-bottom: 6rem;
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 4rem;
+  }
+}
+.mb-md {
+  margin-bottom: 3rem;
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 1.5rem;
+  }
+}
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.padding-top-lg {
+  padding-top: 5rem;
+}
+.img {
+  width: 30%;
+}
+
+.btn {
+  font-size: 1.8rem;
+  color: $grey-dark-2;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-bottom: 0.3rem solid $primary;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1rem 2rem;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+  }
+}

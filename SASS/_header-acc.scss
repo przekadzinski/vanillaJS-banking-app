@@ -1,0 +1,62 @@
+body {
+  border: none;
+}
+.header {
+  font-size: 2rem;
+  background-color: $grey-light-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__logo {
+    height: 7rem;
+    width: 7rem;
+    margin-right: 6rem;
+    margin-left: 3rem;
+  }
+  &__welcome {
+    margin-right: auto;
+    opacity: 0;
+  }
+  &__user-name {
+    font-weight: 600;
+    color: $primary-dark;
+  }
+
+  &__btn-logout {
+    margin-right: 3rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__btn-logout:hover .header__img-logout {
+    fill: $secondary;
+    transform: scale(1.05);
+  }
+
+  &__link {
+    color: none;
+    background-color: none;
+    text-decoration: none;
+  }
+  &__img-logout {
+    width: 4rem;
+    height: 4rem;
+    fill: $primary-dark;
+  }
+  &__logout-time {
+    position: absolute;
+    left: 12%;
+    font-size: 1rem;
+    opacity: 0;
+    transition: 0.4s all;
+  }
+
+  &__logout-time--active {
+    opacity: 1;
+  }
+  &__timer {
+    font-weight: 600;
+  }
+}

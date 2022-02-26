@@ -1,0 +1,95 @@
+$primary: #50879b;
+$primary-light: #7dabbd;
+$primary-dark: #065471;
+
+$secondary: #112a46;
+
+$grey-light-1: #faf9f9;
+$grey-light-2: #f4f2f2;
+$grey-light-3: #f0eeee;
+$grey-light-4: #ccc;
+
+$grey-dark-1: #333;
+$grey-dark-2: #777;
+$grey-dark-3: #999;
+
+$color-deposit-dark: #39b385;
+$color-deposit-light: #9be15d;
+$color-withdraw-dark: #e52a5a;
+$color-withdraw-light: #ff585f;
+$color-loan-dark: #ffb003;
+$color-loan-light: #ffcb03;
+
+$fontFamily: 'Poppins', sans-serif;
+$bp-largest: 87.5em; //1400
+$bp-larger: 75em; //1200
+$bp-large: 64em; //1024
+$bp-medium: 56.25em; //900
+$bp-small: 42.5em; //680
+$bp-smaller: 37.5em; // 600
+$bp-smallest: 23rem; //360
+
+// //older browsers
+// background-image: url(/chevron-thin-right.svg);
+// background-size: cover;
+
+// //nower browsers - masks
+// @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+//   background-color: var(--color-primary);
+//   -webkit-mask-image: url(/chevron-thin-right.svg);
+//   -webkit-mask-size: cover;
+//   mask-image: url(/chevron-thin-right.svg);
+//   mask-size: cover;
+//   background-image: none;
+// }
+// }
+
+$gradient: linear-gradient(to right, $primary, $primary-dark);
+$border-top: 0.2rem solid $grey-dark-3;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 42%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 35%;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  font-weight: 300;
+
+  line-height: 1.9;
+  line-height: 1.6;
+  max-width: 140rem;
+  margin: 0 auto;
+  border: 0.2rem solid $grey-dark-3;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: $grey-dark-1;
+}
+
+.container {
+  position: relative;
+}
+
+// .container {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-template-rows: 70vh repeat(5, min-content);
+// }

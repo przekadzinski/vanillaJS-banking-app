@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>VanillaPRO - konto osobiste</title>
+    <link rel="shortcut icon" href="img/logo-tr.png" type="image/png" />
+    <link rel="stylesheet" href="css/style-account.css" />
+  </head>
+  <body class="containter">
+    <header class="header">
+      <a href="index.html" class="header__goToMainPage"><img src="IMG/logo_transparent.png" alt="" class="header__logo" /></a>
+      
+      <div class="header__welcome">
+        Witaj ponownie, <span class="header__user-name">Kamil</span> 👋
+      </div>
+      <button class="header__btn-logout hidden">
+        <a href="#">
+          <svg class="header__img-logout">
+            <use xlink:href="symbol-defs.svg#icon-switch"></use>
+          </svg>
+        </a>
+      </button>
+      <p class="header__logout-time">
+        Zostaniesz automatycznie wylogowany za:
+        <span class="header__timer">2:00</span>
+      </p>
+    </header>
+
+
+
+    <div class="operations">
+      <div class="operations__tab-container mb-sm">
+        <button class="operations__tab operations__tab--active" data-tab = "1">
+          Logowanie
+        </button>
+        <button class="operations__tab" data-tab = "2">
+          Załóż konto
+        </button>
+      </div>
+     
+      
+    <div id="1" class="login visible operations__content--1 operations__content">
+      <h2 class="heading-2 highlight">Logowanie</h2>
+      <form action="submit" class="login__form">
+        <label for="#">Nazwa użytkownika:</label>
+        <input
+          type="text"
+          class="login__input login__input-username "
+          placeholder="Nazwa użytkownika"
+        />
+        <label for="#">Hasło:</label>
+        <input
+          type="password"
+
+          class="login__input login__input-password"
+          placeholder="Hasło"
+        />
+        <button class="btn login__btn">Zaloguj</button> 
+        </span>
+      </form>
+    </div>
+
+      
+    <div id='2' class="signup operations__content--2 operations__content">
+        <h2 class="heading-2 highlight">Załóż konto</h2>
+        <form action="submit" class="login__form">
+         <label for="#">Imię:</label>
+         <input type="text" placeholder="Podaj swoje imię (min. 3 litery)" class="login__input signup__input--newFirstName" minlength="3">
+        <label for="#">Nazwisko:</label>
+        <input type="text" placeholder="Podaj swoje nazwisko" class="login__input signup__input--newSurName" minlength="3">
+        <label for="">Hasło:</label>
+        <input type="password" placeholder="Podaj hasło (inne niż imię)" class="login__input signup__input--password" minlength="6">
+        <button class="btn signup__btn">Załóż konto</button>
+      </form>
+       
+    </div>
+  </div>
+
+
+
+
+
+      <div class="login__success">
+        Zostałeś pomyślnie zalogowany!
+        <img src="./SVG/spinner2.svg" alt="spinner" class="spinner login__success-spinner">
+      </div>
+
+      
+  <div class="popup-success hidden">
+    <div class="message">
+      Pomyślnie założono konto! 
+      <div>Możesz zacząć z nami bankować 🤑</div>
+      <div class="mt-md mb-md">Za chwilkę zostaniesz przeniesiony do okna logowania</div>
+    <div>Twój login to:</div>    <span class="popup-success__login"></span>
+    </div>
+  </div>
+
+ 
+
+
+    <main class="app mt-lg">
+      <div class="balance">
+        <p class="balance__date"><span class="date">12/05/2010</span></p>
+        <p class="balance__current-balance">
+          Stan konta: <span class="balance__value">1250</span> PLN
+        </p>
+      </div>
+      <div class="movements">
+        <div class="movements__row movements__row-deposit">
+          <div class="movements__data">3 days ago</div>
+          <div class="movements__value">4000 PLN</div>
+        </div>
+        <div class="movements__row movements__row-withdrawal">
+          <div class="movements__data">3 days ago</div>
+          <div class="movements__value">4000 PLN</div>
+        </div>
+
+        <div class="movements__row movements__row-loan">
+          <div class="movements__data">3 days ago</div>
+          <div class="movements__value">4000 PLN</div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <p class="summary__label">
+          Wpływy: <span class="summary__in">1200</span> PLN
+        </p>
+        <p class="summary__label">
+          Wydatki: <span class="summary__out">1200</span> PLN
+        </p>
+
+        <button class="summary__btn">&downarrow; Sortuj</button>
+      </div>
+
+      <aside class="actions">
+        <div class="operation operation--transfer">
+          <input type="checkbox" class="expand" id="expand-transfer" />
+          <label class="operation__label" for="expand-transfer"
+            ><span class="operation__arrow">&darr;</span> Nowy przelew
+          </label>
+          <div class="operation__expandable">
+            <div class="transer operation__expandable--flex">
+              <label class="highlight" for="#">Nazwa odbiorcy:</label>
+              <input
+                type="text"
+                minlength="6"
+                class="operation__input transfer__input-account"
+                placeholder="Wpisz nazwę np. kamtes"
+              />
+              <label class="highlight" for="#">Imię i nazwisko odbiorcy:</label>
+              <input
+                type="text"
+                minlength="4"
+                class="operation__input transfer__input-name"
+                placeholder="Imię i nazwisko odbiorcy"
+              />
+              <label class="highlight" for="#">Kwota:</label>
+              <input
+                type="number"
+                minlength="1"
+                class="operation__input transfer__input-value"
+                placeholder="Kwota"
+              />
+              <button class="operation__btn transfer__btn btn">
+                Wyślij &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="operation operation--loan">
+          <input type="checkbox" class="expand" id="expand-loan" />
+          <label class="operation__label" for="expand-loan"
+            ><span class="operation__arrow">&darr;</span> Szybka pożyczka</label
+          >
+          <div class="operation__expandable">
+            <div class="loan operation__expandable--flex">
+              <p class="operation__description">
+                Maksymalna kwota szybkiej pożyczki stanowi 300% wpływów na
+                konto. I może być wykorzystana tylko raz w roku.
+              </p>
+              <label class="highlight" for="#">Wpisz kwotę pożyczki: </label>
+              <input type="number" class="operation__input loan__input-value" />
+              <button class="operation__btn loan__btn btn">
+                Złóż wniosek &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="operation operation--delete-acount">
+          <input type="checkbox" class="expand" id="expand-close" />
+          <label class="operation__label" for="expand-close"
+            ><span class="operation__arrow">&darr;</span> Zamknij konto</label
+          >
+          <div class="operation__expandable">
+            <div class="close operation__expandable--flex">
+              <label class="highlight" for="#">Login:</label>
+              <input type="text" class="operation__input close__input-login" />
+              <label class="highlight" for="#">Hasło:</label>
+              <input type="number" class="operation__input close__input-password" />
+              <button class="operation__btn close__btn btn">
+                Zamknij konto &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="operation operation--card">
+          <input type="checkbox" class="expand" id="expand-card" />
+          <label class="operation__label" for="expand-card"
+            ><span class="operation__arrow">&darr;</span> Moja karta
+          </label>
+          <div class="operation__expandable">
+            <div class="card">
+              <div class="card__logo">
+                <img
+                  src="IMG/logo-tr.png"
+                  alt="logo-card"
+                  class="card__logo-img"
+                />
+                Vanilla Bank
+              </div>
+
+              <img src="IMG/chip.png" alt="chip" class="card__chip" />
+              <div class="card__signal">
+                <svg class="card__signal-img">
+                  <use xlink:href="symbol-defs.svg#icon-signal"></use>
+                </svg>
+              </div>
+              <div class="card__data">
+                <div class="card__name">
+                  <p class="card__name-firstname">Kamil</p>
+                  <p class="card__name-surname">Przekadziński</p>
+                </div>
+
+                <div class="card__number"><p>0000 0000 0000 0000</p></div>
+              </div>
+              <div class="card__footer">
+                <p>12/29</p>
+                <img
+                  src="/IMG/visa-tr.png"
+                  alt="visa logo"
+                  class="card__footer-img"
+                />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script src="main2.js"></script>
+  </body>
+</html>
